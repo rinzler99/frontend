@@ -20,6 +20,7 @@ function QuickSearchToolbar(props) {
         pb: 0,
       }}
     >
+      
       <TextField
         variant="standard"
         value={props.value}
@@ -108,3 +109,4 @@ export default function QuickFilteringGrid() {
     </Box>
   );
 }
+
