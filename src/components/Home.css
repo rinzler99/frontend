@@ -42,13 +42,13 @@
 }
 
 .button1 {
-    background-color: #00a278 !important;
+    background-color: #00a23e !important;
 }
 .button2 {
-    background-color: lightcoral !important;
+    background-color: hsl(0, 94%, 46%) !important;
 }
 .button3 {
-    background-color: darkolivegreen !important;
+    background-color: rgb(72, 154, 209) !important;
 }
 .button:hover {
     background-color: #00845c !important;

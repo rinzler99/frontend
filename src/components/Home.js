@@ -27,7 +27,7 @@ const Home = ({setName}) => {
     return (
         <Grid Grid container >
             
-            <Grid md={5} xs={12}>
+            <Grid md={4} xs={12}>
             <Box className="form" >
         {/* <Stack spacing={2} className="form"> */}
         <h3 className="title">Welcome, Pradeep!</h3>
@@ -35,7 +35,7 @@ const Home = ({setName}) => {
         <Stack spacing={3}>
         <Grid Grid container >
           <Grid md={3}></Grid>
-          <Grid md={3}>
+          <Grid md={4}>
           <Chip label="You Gave"  color="error" />
           </Grid>
           <Grid md={3}>
@@ -47,7 +47,7 @@ const Home = ({setName}) => {
           
           <Grid Grid container >
           <Grid md={3}></Grid>
-          <Grid md={3}>
+          <Grid md={4}>
           <Chip label="You will Get"  color="success" />
           </Grid>
           <Grid md={3}>
@@ -58,7 +58,7 @@ const Home = ({setName}) => {
           <Divider/>
           <Grid Grid container >
           <Grid md={3}></Grid>
-          <Grid md={3}>
+          <Grid md={4}>
           <Chip label="Total Balance"  color="primary" />
           </Grid>
           <Grid md={3}>
@@ -76,9 +76,9 @@ const Home = ({setName}) => {
         <h4 className="money">+200rs</h4> */}
         </Stack>
         
-        <Stack spacing={13} direction="row" className="stack1">
-        <Button className="button1" variant="contained">You Got</Button>
-        <Button className="button2" variant="contained">You Gave</Button>
+        <Stack spacing={2} direction="row" className="stack1">
+        <Button className="button1" variant="contained">Add Record</Button>
+        <Button className="button2" variant="contained">Mark Paid</Button>
         <Button className="button3" variant="contained">Logout</Button>
         </Stack>
         
@@ -93,7 +93,7 @@ const Home = ({setName}) => {
 
       </Box >
             </Grid> */}
-            <Grid md={7} xs={12}>
+            <Grid md={8} xs={12}>
             <Box className="form">
         {/* <Stack spacing={2} > */}
         <h2 className="title">Transaction History</h2>
