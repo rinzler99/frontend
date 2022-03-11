@@ -3,8 +3,10 @@ import "./Home.css";
 import Box from "@mui/material/Box";
 import { Avatar, Button, Stack , Grid, InputAdornment,
   TextField } from "@mui/material";
+import Chip from '@mui/material/Chip';
+import DataTable from './DataTable';
+import Divider from '@mui/material/Divider';
 
-import DataTable from './DataTable'
 
 
 
@@ -24,20 +26,77 @@ const Home = ({setName}) => {
 
     return (
         <Grid Grid container >
-            <Grid md={4}/>
-            <Grid md={4} xs={12}>
+            
+            <Grid md={5} xs={12}>
             <Box className="form" >
         {/* <Stack spacing={2} className="form"> */}
         <h3 className="title">Welcome, Pradeep!</h3>
-        <h4 className="title">Your Balance is +100rs</h4>
+        
+        <Stack spacing={3}>
+        <Grid Grid container >
+          <Grid md={3}></Grid>
+          <Grid md={3}>
+          <Chip label="You Gave"  color="error" />
+          </Grid>
+          <Grid md={3}>
+          <Chip label="1000rs" variant="outlined" color="error" />
+          </Grid>
+          <Divider/>
+          </Grid>
+          <Divider/>
+          
+          <Grid Grid container >
+          <Grid md={3}></Grid>
+          <Grid md={3}>
+          <Chip label="You will Get"  color="success" />
+          </Grid>
+          <Grid md={3}>
+          <Chip label="1200rs" variant="outlined" color="success" />
+          </Grid>
+          <Divider/>
+          </Grid>
+          <Divider/>
+          <Grid Grid container >
+          <Grid md={3}></Grid>
+          <Grid md={3}>
+          <Chip label="Total Balance"  color="primary" />
+          </Grid>
+          <Grid md={3}>
+          <Chip label="+200rs" variant="outlined" color="primary" />
+          </Grid>
+          <Divider/>
+          </Grid>
+          <Divider/>
+          
+          
+        
+        {/* <Chip label="You will Get" variant="outlined" color="success" />
+        <h4 className="money">1200rs</h4>
+        <Chip label="Total Balance" variant="outlined" color="primary" />
+        <h4 className="money">+200rs</h4> */}
+        </Stack>
+        
+        <Stack spacing={13} direction="row" className="stack1">
+        <Button className="button1" variant="contained">You Got</Button>
+        <Button className="button2" variant="contained">You Gave</Button>
+        <Button className="button3" variant="contained">Logout</Button>
+        </Stack>
+        
 
         {/* </Stack> */}
       </Box >
             </Grid>
-            <Grid md={12} xs={12}>
+            {/* <Grid md={7}>
+            <Box className="form" >
+     
+        <h4 className="title">Your Balance is +100rs</h4>
+
+      </Box >
+            </Grid> */}
+            <Grid md={7} xs={12}>
             <Box className="form">
         {/* <Stack spacing={2} > */}
-        {/* <h2 className="title">Login success</h2> */}
+        <h2 className="title">Transaction History</h2>
         <DataTable></DataTable>
         {/* </Stack> */}
       </Box>
