@@ -6,6 +6,7 @@ import { createTheme } from '@mui/material/styles';
 import TableCell from '@mui/material/TableCell';
 import Paper from '@mui/material/Paper';
 import { AutoSizer, Column, Table } from 'react-virtualized';
+import { Button, CircularProgress, Stack, TextField } from "@mui/material";
 
 const styles = (theme) => ({
   flexContainer: {
@@ -159,13 +160,13 @@ const sample = [
   ['Gingerbread', 356, 16.0, 49, 3.9],
 ];
 
-function createData(id, dessert, calories, fat, carbs, protein) {
-  return { id, dessert, calories, fat, carbs, protein };
+function createData(transId, user, type, date, status, reason) {
+  return { transId, user, type, date, status, reason};
 }
 
 const rows = [];
 
-for (let i = 0; i < 20; i += 1) {
+for (let i = 0; i < 10; i += 1) {
   const randomSelection = sample[Math.floor(Math.random() * sample.length)];
   rows.push(createData(i, ...randomSelection));
 }
@@ -173,38 +174,41 @@ for (let i = 0; i < 20; i += 1) {
 export default function DataTable() {
   return (
     <Paper style={{ height: 400, width: '100%' }}>
+      
       <VirtualizedTable
         rowCount={rows.length}
         rowGetter={({ index }) => rows[index]}
         columns={[
           {
             width: 200,
-            label: 'Dessert',
-            dataKey: 'dessert',
+            label: 'Trans_id',
+            dataKey: 'transId',
+          },
+          {
+            width: 200,
+            label: 'User',
+            dataKey: 'user',
           },
           {
             width: 120,
-            label: 'Calories\u00A0(g)',
-            dataKey: 'calories',
-            numeric: true,
+            label: 'Trans_type',
+            dataKey: 'type',
+            
+          },
+          {
+            width: 200,
+            label: 'Trans_date',
+            dataKey: 'date',
           },
           {
             width: 120,
-            label: 'Fat\u00A0(g)',
-            dataKey: 'fat',
-            numeric: true,
+            label: 'Status',
+            dataKey: 'status',
           },
           {
-            width: 120,
-            label: 'Carbs\u00A0(g)',
-            dataKey: 'carbs',
-            numeric: true,
-          },
-          {
-            width: 120,
-            label: 'Protein\u00A0(g)',
-            dataKey: 'protein',
-            numeric: true,
+            width: 200,
+            label: 'Reason',
+            dataKey: 'reason',
           },
         ]}
       />

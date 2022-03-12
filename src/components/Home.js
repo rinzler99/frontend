@@ -97,6 +97,15 @@ const Home = ({setName}) => {
             <Box className="form">
         {/* <Stack spacing={2} > */}
         <h2 className="title">Transaction History</h2>
+        <TextField
+            id="username"
+            variant="outlined"
+            label="username"
+            name="username"
+            type="username"
+            placeholder="Enter Username"
+            // onChange={(e)=> {setLoginData({...loginData, [e.target.name]:e.target.value})}}
+          />
         <DataTable></DataTable>
         {/* </Stack> */}
       </Box>
